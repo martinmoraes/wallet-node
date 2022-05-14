@@ -1,4 +1,4 @@
-const { EntryPointExpress } = require('./entrypoint/express/entryPointExpress');
+const { EntryPointExpress } = require('./entrypoint/express/EntryPointExpress');
 
 (() => {
   try {
