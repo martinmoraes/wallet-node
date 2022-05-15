@@ -8,7 +8,6 @@ class CreateTransactionUseCase {
     try {
       const objInstance = await this.createTransaction(transaction);
       const transactionReceived = await this.findTransaction(objInstance);
-      console.log(transactionReceived);
       this.presenter.ok(transactionReceived);
     } catch (error) {
       this.presenter.fail(error);

@@ -19,12 +19,22 @@ class TransactionRepository extends DB {
   }
 
   async findByObjectID(objectID) {
-    // var o_id = new ObjectId(objectID);
     const connection = await this.dbConnection();
     const result = await connection
       .db(process.env.DATABASE)
       .collection(this.collectionName)
       .findOne({ _id: ObjectId(objectID) });
+    connection.close();
+    return result;
+  }
+
+  async findAll(payload) {
+    const connection = await this.dbConnection();
+    const result = await connection
+      .db(process.env.DATABASE)
+      .collection(this.collectionName)
+      .find(payload)
+      .toArray();
     connection.close();
     return result;
   }
