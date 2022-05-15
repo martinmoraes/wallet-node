@@ -6,6 +6,7 @@ const {
 } = require('../../../src/repositories/TransactionRepository');
 const { PresenterConsole } = require('../../../src/presenter/presenterConsole');
 const ObjectId = require('mongodb').ObjectId;
+const sinon = require('sinon');
 
 describe('CreateTransactonUseCase', () => {
   let createdTransactionUseCase;
@@ -16,12 +17,13 @@ describe('CreateTransactonUseCase', () => {
     );
   });
   it('should return transacton without _id', async () => {
-    // const transaction = {
-    //   _id: new ObjectId('6280ebc9fca7d95bd295cb30'),
-    //   user_id: '123',
-    //   type: 'CREDIT',
-    //   amount: 100,
-    // };
+    const objetoOriginal = new TransactionRepository();
+    const objectStub = sinon.stub(objetoOriginal, 'findByObjectID').returns({
+      _id: new ObjectId('6280ebc9fca7d95bd295cb30'),
+      user_id: '123',
+      type: 'CREDIT',
+      amount: 100,
+    });
 
     const createdTransacton = {
       acknowledged: true,

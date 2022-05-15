@@ -8,7 +8,7 @@ describe('TransactionRepository', () => {
     transactionRepository = new TransactionRepository();
   });
 
-  it('should crete transaction', async () => {
+  it.skip('should crete transaction', async () => {
     const transaction = {
       user_id: '123',
       type: 'CREDIT',
@@ -24,7 +24,7 @@ describe('TransactionRepository', () => {
     );
   });
 
-  it('should find transaction', async () => {
+  it.skip('should find transaction', async () => {
     const transaction = {
       user_id: '123',
       type: 'CREDIT',
@@ -45,7 +45,7 @@ describe('TransactionRepository', () => {
     );
   });
 
-  it('should find all transaction by user_id', async () => {
+  it.skip('should find all transaction by user_id', async () => {
     const user_id = '123';
     const resulted = await transactionRepository.findAll({ user_id });
     console.log(resulted);
@@ -62,7 +62,7 @@ describe('TransactionRepository', () => {
     );
   });
 
-  it('should find all transaction', async () => {
+  it.skip('should find all transaction', async () => {
     const resulted = await transactionRepository.findAll({});
     console.log(resulted);
 
