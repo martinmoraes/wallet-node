@@ -20,7 +20,6 @@ describe('FetchBalance', () => {
       .stub(objetoOriginal, 'balance')
       .returns([{ _id: null, result: 4230 }]);
     const resulted = await fetchBalanceUseCase.fetchBalance(user_id);
-    console.log(resulted);
     expect(resulted).toEqual(
       expect.objectContaining({ amount: expect.any(Number) }),
     );

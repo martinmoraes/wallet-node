@@ -32,7 +32,6 @@ describe('CreateTransactonUseCase', () => {
     const resulted = await createdTransactionUseCase.findTransaction(
       createdTransacton,
     );
-    console.log(resulted);
     expect(resulted).toEqual(
       expect.objectContaining({ user_id: '123', type: 'CREDIT', amount: 100 }),
     );

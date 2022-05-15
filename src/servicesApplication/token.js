@@ -3,7 +3,6 @@ require('dotenv/config');
 
 class Token {
   generate(obj) {
-    console.log(process.env.PRIVATEKEY, process.env.EXPIRES_IN);
     const token = jwt.sign(obj, process.env.PRIVATEKEY, {
       expiresIn: process.env.EXPIRES_IN,
     });

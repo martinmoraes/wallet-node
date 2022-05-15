@@ -17,7 +17,6 @@ class FetchBalance {
 
   async fetchBalance(user_id) {
     const resultBalance = await this.transactionRepository.balance(user_id);
-    console.log(resultBalance);
     return { amount: resultBalance[0].result };
   }
 }

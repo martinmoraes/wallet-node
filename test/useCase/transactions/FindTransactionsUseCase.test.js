@@ -28,7 +28,6 @@ describe('CreateTransactonUseCase', () => {
       },
     ]);
     const resulted = await findTransactionUseCase.findAllTransactions(user_id);
-    console.log(resulted);
     expect(resulted).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -42,7 +41,6 @@ describe('CreateTransactonUseCase', () => {
 
   it('should return all transacton', async () => {
     const resulted = await findTransactionUseCase.findAllTransactions();
-    console.log(resulted);
     expect(resulted).toEqual(
       expect.arrayContaining([
         expect.objectContaining({

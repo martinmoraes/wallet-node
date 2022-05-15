@@ -6,7 +6,7 @@ const { EntryPointExpress } = require('./entrypoint/express/EntryPointExpress');
     // await synchronizeDB.execute();
     new EntryPointExpress().execute();
   } catch (error) {
-    console.log('index.js', 'Não conectou ao banco', error);
+    console.log('Aplicação encerrada: ', error);
     process.exit(1);
   }
 })();

@@ -15,7 +15,6 @@ describe('TransactionRepository', () => {
       amount: 100,
     };
     const createdTransaction = await transactionRepository.create(transaction);
-    console.log(createdTransaction);
     expect(createdTransaction).toEqual(
       expect.objectContaining({
         acknowledged: true,
@@ -48,7 +47,6 @@ describe('TransactionRepository', () => {
   it.skip('should find all transaction by user_id', async () => {
     const user_id = '123';
     const resulted = await transactionRepository.findAll({ user_id });
-    console.log(resulted);
 
     expect(resulted).toEqual(
       expect.arrayContaining([
@@ -64,7 +62,6 @@ describe('TransactionRepository', () => {
 
   it.skip('should find all transaction', async () => {
     const resulted = await transactionRepository.findAll({});
-    console.log(resulted);
 
     expect(resulted).toEqual(
       expect.arrayContaining([
