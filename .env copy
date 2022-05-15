@@ -2,7 +2,7 @@
 PORT=3333
 
 #MongoDB
-MONGOCONNECT=mongodb://<<user>>:<<password>>@mongodb:27017/wallet
+MONGOCONNECT=mongodb://<<user>>:<<password>>@mongodb:27017/admin
 DATABASE=wallet
 
 #JWT
