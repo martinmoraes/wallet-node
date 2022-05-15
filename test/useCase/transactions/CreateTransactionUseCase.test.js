@@ -1,10 +1,10 @@
 const {
   CreateTransactionUseCase,
-} = require('../../src/useCase/transaction/CreateTransactionUseCase');
+} = require('../../../src/useCase/transaction/CreateTransactionUseCase');
 const {
   TransactionRepository,
-} = require('../../src/repositories/TransactionRepository');
-const { PresenterConsole } = require('../../src/presenter/presenterConsole');
+} = require('../../../src/repositories/TransactionRepository');
+const { PresenterConsole } = require('../../../src/presenter/presenterConsole');
 const ObjectId = require('mongodb').ObjectId;
 
 describe('CreateTransactonUseCase', () => {

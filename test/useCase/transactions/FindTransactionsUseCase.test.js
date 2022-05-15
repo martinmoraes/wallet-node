@@ -1,10 +1,10 @@
 const {
   FindTransactionsUseCase,
-} = require('../../src/useCase/transaction/FindTransactionsUseCase');
+} = require('../../../src/useCase/transaction/FindTransactionsUseCase');
 const {
   TransactionRepository,
-} = require('../../src/repositories/TransactionRepository');
-const { PresenterConsole } = require('../../src/presenter/presenterConsole');
+} = require('../../../src/repositories/TransactionRepository');
+const { PresenterConsole } = require('../../../src/presenter/presenterConsole');
 
 describe('CreateTransactonUseCase', () => {
   let findTransactionUseCase;
