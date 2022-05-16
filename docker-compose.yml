@@ -4,7 +4,7 @@ services:
   app:
     build: .
     entrypoint: .docker/entrypoint.sh
-    container_name: apivendas-app
+    container_name: wallet-app
     ports:
       - '3001:3333'
     volumes:
@@ -17,7 +17,7 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ~/apps/mongo:/data/db
+      - ./data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=wallet
       - MONGO_INITDB_ROOT_PASSWORD=wallet
