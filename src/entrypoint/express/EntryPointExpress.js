@@ -20,8 +20,7 @@ class EntryPointExpress {
 
     app.listen(process.env.PORT, () =>
       console.log(
-        'startExpress',
-        `Servidor está rodando na porta ${process.env.PORT}`,
+        `Start Express, servidor está rodando na porta ${process.env.PORT}`,
       ),
     );
   }
