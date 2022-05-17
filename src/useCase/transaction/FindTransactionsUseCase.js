@@ -9,7 +9,7 @@ class FindTransactionsUseCase {
       const foundTransactions = await this.findAllTransactions(user_id);
       this.presenter.ok(foundTransactions);
     } catch (error) {
-      this.presenter.fail(error);
+      this.presenter.fail(error.message);
     }
   }
 

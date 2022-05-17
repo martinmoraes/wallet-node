@@ -16,7 +16,7 @@ describe('CreateTransactonUseCase', () => {
       new TransactionRepository(),
     );
   });
-  it('should return transacton without _id', async () => {
+  it('should return transaction without _id', async () => {
     const objetoOriginal = new TransactionRepository();
     const objectStub = sinon.stub(objetoOriginal, 'findByObjectID').returns({
       _id: new ObjectId('6280ebc9fca7d95bd295cb30'),
@@ -34,6 +34,20 @@ describe('CreateTransactonUseCase', () => {
     );
     expect(resulted).toEqual(
       expect.objectContaining({ user_id: '123', type: 'CREDIT', amount: 100 }),
+    );
+  });
+
+  it.skip('should return user of docker users', async () => {
+    const user_id = '222';
+    const resulted = await createdTransactionUseCase.userIsValid({ user_id });
+    console.log(resulted.data);
+    expect(resulted.data).toEqual(
+      expect.objectContaining({
+        id: expect.any(String),
+        first_name: expect.any(String),
+        last_name: expect.any(String),
+        email: expect.any(String),
+      }),
     );
   });
 });
