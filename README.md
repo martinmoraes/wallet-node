@@ -9,6 +9,7 @@
 ```
 $ git clone https://github.com/martinmoraes/wallet-node
 $ cd wallet-node
+$ chmod +x docker/entrypoint.sh
 $ docker-compose up
 ```
 
